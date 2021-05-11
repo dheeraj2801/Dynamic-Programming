@@ -4,7 +4,7 @@ each cell of the Matrix.
 Print the Minimum Cost and
 Print All the Minumun Cost Paths
 You can move only : Horizontal (H)
-					Vertical (V)
+		    Vertical (V)
 I/P:
 	Matrix: 
 		2 6 1 1 3
