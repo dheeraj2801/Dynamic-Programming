@@ -15,8 +15,8 @@ I/P:
 O/P:
 	Path Cost : 20
 	Paths : HVHHVHVV
-			HHVHVHVV
-			HHHVVVHV
+		HHVHVHVV
+		HHHVVVHV
 TC : O(m * n)
 SC : O(m * n)
 */
@@ -63,18 +63,18 @@ int main(){
 		if(it.s.f == m-1 && it.s.s == n-1){
 			cout << it.f << "\n";
 		}else if(it.s.f == m-1){
-			q.push({it.f+"H",{it.s.f, it.s.s+1}});
+			q.push({it.f+"H", {it.s.f, it.s.s+1}});
 		}else if(it.s.s == n-1){
-			q.push({it.f+"V",{it.s.f+1, it.s.s}});
+			q.push({it.f+"V", {it.s.f+1, it.s.s}});
 		}else{
 			if(dp[it.s.f][it.s.s+1] < dp[it.s.f+1][it.s.s]){
-				q.push({it.f+"H",{it.s.f, it.s.s+1}});
+				q.push({it.f+"H", {it.s.f, it.s.s+1}});
 			}
 			else if(dp[it.s.f][it.s.s+1] > dp[it.s.f+1][it.s.s]){
-				q.push({it.f+"V",{it.s.f+1, it.s.s}});
+				q.push({it.f+"V", {it.s.f+1, it.s.s}});
 			}else{
-				q.push({it.f+"H",{it.s.f, it.s.s+1}});
-				q.push({it.f+"V",{it.s.f+1, it.s.s}});
+				q.push({it.f+"H", {it.s.f, it.s.s+1}});
+				q.push({it.f+"V", {it.s.f+1, it.s.s}});
 			}
 		}
 	}
